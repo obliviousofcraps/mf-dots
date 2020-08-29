@@ -1,0 +1,4 @@
+#define bullet_width 6
+#define bullet_height 6
+static unsigned char bullet_bits[] = {
+   0x06, 0x0c, 0x18, 0x18, 0x0c, 0x06 };

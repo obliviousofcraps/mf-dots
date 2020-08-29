@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Dark-ish
+Comment=Created with Themix GUI
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=oomox-baloon
+GtkTheme=oomox-baloon
+IconTheme=oomox-baloon
+MetacityTheme=oomox-baloon

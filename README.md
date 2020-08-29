@@ -1,6 +1,6 @@
 # Dotfiles
 
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/scrot.png)
+
 
 My Arch based Openbox configs:
 
@@ -31,12 +31,14 @@ My Arch based Openbox configs:
 | **Music Player (GUI)**   | Spotify & Audacious                                                                                                    |
 
 # Screenshots
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/scrots/snap_1.png)
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/scrots/snap_2.png)
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/scrots/snap_4.png)
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/scrots/snap_3.png)
 
-**[Wallpaper](https://github.com/obliviousofcraps/dotfiles/blob/master/mountain_lake_dark_1280x720.jpg)**
+**August 14**
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August 14-20/scrot.png)
+
+**August 29**
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August 29-20/snap_28_08_20_17_54.png.png)
+
+
 
 
 # Disclaimer: 
