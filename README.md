@@ -36,7 +36,7 @@ My Arch based Openbox configs:
 ![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-14-20/scrot.png)
 
 **August 29**
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-29-20/snap_28_08_20_17_54.png.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-29-20/snap_28_08_20_17_54.png)
 
 
 
