@@ -1,0 +1,45 @@
+#windows
+
+window.*.title.bg.color: #C2C6C7
+window.*.label.text.color: #392f3d
+window.active.button.unpressed.image.color: #392f3d
+window.active.button.hover.image.color: #ffffff
+window.inactive.button.unpressed.image.color: #392f3d
+window.inactive.button.hover.image.color: #ffffff
+window.active.border.color: #c2c6c7
+
+
+# Borders
+
+window.handle.width: 0
+window.client.padding.width: 0
+border.width: 10
+
+
+# Title
+
+padding.width: 13
+padding.height: 8
+window.*.title.bg: Solid Flat
+window.*.*.bg: Parentrelative
+window.label.text.justify: center
+
+#menu
+menu.items.active.bg: Solid Flat
+menu.items.active.bg.color: #14111c
+menu.items.active.text.color: #f2d091
+menu.items.bg: Flat Solid
+menu.items.bg.color: #c2c6c7
+menu.items.disabled.text.color: #666
+menu.items.text.color: #392f3d
+menu.border.width: 15
+menu.border.color: #c2c6c7
+menu.separator.color: #c2c6c7
+menu.title.bg: Solid Flat
+menu.title.bg.color: #c2c6c7
+menu.title.text.color: #392f3d
+menu.title.text.justify: Center
+
+#menu.border.width: 10
+menu.overlap.x:    -22
+menu.overlap.y:    -20

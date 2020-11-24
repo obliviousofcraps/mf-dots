@@ -28,18 +28,27 @@ My Arch based Openbox configs:
 | **System Monitor (CLI)** | Htop                                                                                                                   |
 | **Notification-daemon**  | [Dunst](https://wiki.archlinux.org/index.php/Dunst)                    										        |
 | **Music Player (CLI)**   | mpd, mpc and ncmpcpp                                                                                                   |
-| **Music Player (GUI)**   | Spotify & Audacious                                                                                                    |
+| **Music Player (GUI)**   | Spotify                                                                                                   |
 
 # Screenshots
 
-**August 14**
-![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-14-20/scrot.png)
+**Nov 23**
+![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Nov-24-20/snapshot.png)
+
+**October 25**
+![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Oct-25-20/snapshot.png)
+
+**September 11**
+![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Sep-11-20/snap_11_09_20_11_52.png)
 
 **August 29**
 ![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-29-20/snap_28_08_20_17_54.png)
 
-**September 11**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Sep-11-20/snap_11_09_20_11_52.png)
+**August 14**
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-14-20/scrot.png)
+
+
+
 
 
 

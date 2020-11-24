@@ -1,0 +1,54 @@
+configuration {
+  modi: "run,drun,window";
+  width: 30;
+  font: "Iosevka Term Regular 10";
+  terminal: "kitty";
+  disable-history: false;
+  sidebar-mode: true;
+  tokenize: true;
+  m: "-5";
+  line-margin: 4;
+  line-padding: 5;
+  separator-style: "none";
+  hide-scrollbar: true;
+  window-format: "{w} {c}";
+}
+
+* {
+  /*bg: #0F1212;*/
+  bg: #13151a;
+  fg: #e3e3e3;
+  accent: #131717;
+  
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  padding: 30px;
+  border-radius: 0px;
+  border:10px;
+  border-color:#c2c6c7;
+}
+
+prompt, entry {
+  text-color: @fg;
+  padding: 3px 3px 10px 3px;
+}
+
+element {
+  border-radius: 2px;
+  padding: 4px;
+}
+
+element selected {
+  background-color: @fg;
+  text-color: @bg;
+}
+
+button selected {
+  background-color: @fg;
+  text-color: @bg;
+  border-radius: 2px;
+  padding: 4px;
+}
