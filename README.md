@@ -31,6 +31,8 @@ My Arch based Openbox configs:
 | **Music Player (GUI)**   | Spotify                                                                                                   |
 
 # Screenshots
+**Dec 16**
+![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Dec-16-20/snapshot.png)
 
 **Nov 23**
 ![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Nov-24-20/snapshot.png)
