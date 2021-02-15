@@ -31,6 +31,9 @@ My Arch based Openbox configs:
 | **Music Player (GUI)**   | Spotify                                                                                                   |
 
 # Screenshots
+**Feb 15**
+![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Feb-15-21/snapshot.png)
+
 **Dec 16**
 ![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Dec-16-20/snapshot.png)
 
@@ -48,13 +51,8 @@ My Arch based Openbox configs:
 
 **August 14**
 ![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-14-20/scrot.png)
+ 
 
-
-
-
-
-
-
-# Disclaimer: 
-
-I am new to ricing and Linux as a whole so I have used ncmpcpp configs, some rofi themes and scripts and colorscheme from [Owl4ce](https://github.com/owl4ce/dotfiles). So all the credit regarding those goes to him.
+**Credits:** 
+[Owl4ce](https://github.com/owl4ce/dotfiles) (Some scripts and GTK Theme)
+[Rajshekhar26](https://github.com/rajshekhar26/dotfiles) (Redshift script)
