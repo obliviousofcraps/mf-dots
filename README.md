@@ -55,7 +55,7 @@ My Arch based Openbox configs:
 **August 14**
 ![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-14-20/scrot.png)
 
-**ColorScheme**
+**ColorScheme**  
 Eh, I decided to call it Oblivion. Sounds cooler. Light Scheme is in the works too. ![Colorscheme](https://github.com/obliviousofcraps/dotfiles/blob/master/Oblivion.png) 
 
 **Credits:** 
