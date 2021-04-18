@@ -34,22 +34,22 @@ My Arch based Openbox configs:
 
 # Screenshots
 **Apr 02**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Apr-02-21/snapshot.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Apr-02-21/snapshot.png)
 
 **Feb 15**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Feb-15-21/snapshot.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Feb-15-21/snapshot.png)
 
 **Dec 16**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Dec-16-20/snapshot.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Dec-16-20/snapshot.png)
 
 **Nov 23**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Nov-24-20/snapshot.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Nov-24-20/snapshot.png)
 
 **October 25**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Oct-25-20/snapshot.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Oct-25-20/snapshot.png)
 
 **September 11**
-![(Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Sep-11-20/snap_11_09_20_11_52.png)
+![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/Sep-11-20/snap_11_09_20_11_52.png)
 
 **August 29**
 ![Screenshot](https://github.com/obliviousofcraps/dotfiles/blob/master/August-29-20/snap_28_08_20_17_54.png)
