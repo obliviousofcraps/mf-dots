@@ -1,4 +1,3 @@
-# Dotfiles
 <p align="center">
   <a name="top" href="#octocat-hi-there-thanks-for-visiting-">
      <img alt="mf-dots" height="60%" width="100%" src="https://i.ibb.co/nkw32yJ/repo-name.png"/>
