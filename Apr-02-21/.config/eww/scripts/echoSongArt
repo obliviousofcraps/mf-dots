@@ -1,9 +1,0 @@
-#!/bin/sh
-
-status="$(mpc status)"
-
-if [[ $status == *"[playing]"* ]]; then
-	echo "/tmp/mpd_cover.jpg"
-else 
-	echo "$HOME/.mpd/mpdicon.png"
-fi
