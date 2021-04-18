@@ -1,5 +1,5 @@
 # Dotfiles
-
+<p align="center><img src="https://i.ibb.co/nkw32yJ/repo-name.png" alt="mf-dots"></p>
 
 
 My Arch based Openbox configs:
