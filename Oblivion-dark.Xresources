@@ -1,0 +1,38 @@
+! Oblivion-dark Colorscheme
+
+! special
+*.foreground:   #e3e3e3
+*.background:   #1d212a
+*.cursorColor:  #e3e3e3
+
+! black
+*.color0:       #1d212a
+*.color8:       #585e74
+
+! red
+*.color1:       #fc8993
+*.color9:       #fb9199
+
+! green
+*.color2:       #89e19c
+*.color10:      #8de19f
+
+! yellow
+*.color3:       #fbdf90
+*.color11:      #ffe28e
+
+! blue
+*.color4:       #a7bdfb
+*.color12:      #afc3fb
+
+! magenta
+*.color5:       #d990cd
+*.color13:      #df95d3
+
+! cyan
+*.color6:       #81d4ee
+*.color14:      #81d4ee
+
+! white
+*.color7:       #e3e3e3
+*.color15:      #e3e3e3
