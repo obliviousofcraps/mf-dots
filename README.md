@@ -30,7 +30,7 @@ I am still learning my way around customizing and setting up my device so just g
 These are some of the applications that I use in my current setup. 
 
 - **Distribution**: Arch Linux  
-**Window Manager**: [Openbox](https://openbox.org/)  
+- **Window Manager**: [Openbox](https://openbox.org/)  
 - **Shell**:Bash  
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)  
 - **Display Manager**: [Slim](https://github.com/gsingh93/slim-display-manager)  
