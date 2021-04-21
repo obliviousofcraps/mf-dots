@@ -1,0 +1,17 @@
+# position values:
+# 1 2 3
+# 8 0 4
+# 7 6 5
+POSITION=3
+
+#y-offset
+YOFF=45
+
+#x-offset
+XOFF=-20
+
+#fields to be displayed
+FIELDS=SSID,SECURITY,BARS
+
+#font
+FONT="FuraCode Nerd Font 10"

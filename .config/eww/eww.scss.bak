@@ -1,0 +1,167 @@
+* {
+    all: unset;
+}
+
+.player {
+	background-color:#1d212a;
+    padding: 0px 4px;
+	
+}
+
+.player-art {
+	background-color: #1d212a;
+}
+
+.song-art {
+    background-size: 150px;
+    border-radius: 5px;
+}
+
+
+.song-data {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e3e3e3;
+
+    margin: 18px 0px 0px 0px;
+}
+
+.song-title, .song-artist {
+    font-family: "Sarasa Term HC", "Stick";
+    font-size: 14px;
+    font-weight: bold;
+
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.musicon {
+    color: #ff6969;
+    font-family: "Material Design Icons Desktop";
+    font-size: 14px;
+    padding-right: 6px;
+}
+
+.song-artist .musicon {
+    color: #4eff96;
+}
+
+.player-buttons {
+	background-color: #1d212a;
+}
+
+.player-btns button {
+    color: #a7bdfb;
+
+    font-family: "Material Design Icons Desktop";
+    font-size: 18px;
+    margin: 0px 15px;
+}
+
+.player-btns .toggle {
+	background-size: 14px;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+.player-btns button:hover {
+    color: #95c4ce;
+}
+
+.launcher {
+    padding: 6px 4px 4px 4px;
+    background-color: #1d212a;
+}
+
+.launcher button {
+    background-size: 30px;
+    background-repeat: no-repeat;
+}
+
+.time {
+    background-color: #1d212a;
+    padding: 0px 15px;
+}
+
+.hour, .dot-dot, .minute {
+    font-family: "JetBrainsMonoMedium Nerd Font Mono", "HandyCasualCondensed-Regular";
+    font-size: 36px;
+}
+
+.hour {
+    color: #e07979;
+}
+
+.minute {
+    color: #95e7aa;
+}
+
+.dot-dot {
+    color: #a7dbfd;
+}
+
+.profile {
+    background-color: #1d212a;
+    padding: 30px 25px 10px 25px;
+}
+
+.profile-icon {
+    background-image: url('/home/aidoneus/Downloads/Images/circle-cropped-cap.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    margin-bottom: -30px;
+    margin-left: 2px;
+}
+
+.profile-name {
+    font-family: 'HandyCasualCondensed-Regular', 'RecMonoCasual-Regular-1.074';
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.weather {
+    background-color: #1d212a;
+    background-image: url('/home/aidoneus/Pictures/malak-abstract-5k-r1.jpg');
+    background-repeat: no-repeat;
+    background-size: 270px;
+    background-position: top;
+    font-family: "Oswald";
+    padding: 10px 20px 10px 10px;
+    color: #e3e3e3;
+}
+
+
+.current-temp {
+    margin-left: -25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date {
+    background-color: #1d212a;
+    background-image: url('/home/aidoneus/Pictures/malak-abstract-5k-r1.jpg');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: right;
+    font-family: 'Oswald';
+    color: #e3e3e3;
+    padding: 10px;
+}
+
+.battery {
+    background-color: #1d212a;
+}
+
+.battery scale trough {
+    all: unset;
+    background-color: #1d212a;
+    color: #000000;
+    min-height: 60px;
+}
+
+.battery-prog trough highlight {
+    all: unset;
+    background-image: linear-gradient(90deg, hsla(0, 83%, 65%, 1) 20%, hsla(44, 93%, 77%, 1) 100%);
+    color: #000000;
+}

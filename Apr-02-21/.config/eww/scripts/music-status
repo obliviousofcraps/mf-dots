@@ -1,9 +1,0 @@
-#!/bin/bash
-
-status="$(mpc status)"
-
-if [[ $status == *"[playing]"* ]]; then
-    echo "/home/aidoneus/.icons/Crayons/pause-button.svg"
-else
-    echo "/home/aidoneus/.icons/Crayons/play-button.svg"
-fi

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+give_ws_names() {
+	wmctrl -d | awk '{ print $1 " " $2 " " $10 }'
+}
+
+give_ws_xml() {
+	give_ws_names | while read -r id active name; do
+		name="${name#*_}"
+		if [ "$active" == "*" ]; then
+			button_class="active_wsp"
+		elif wmctrl -l | grep --regexp '.*\s\+'"$id"'\s\+.*' >/dev/null; then
+			button_class="full_wsp"
+		else
+			button_class="inactive_wsp"
+		fi
+	echo -n '<button class="'"$button_class"'" onclick="wmctrl -s '"$id"'">'"$name"'</button>'
+done
+}
+
+xprop -root -notype _NET_CURRENT_DESKTOP | while read -r; do
+echo '<box orientation="h" class="workspaces" space-evenly="true" halign="start" valign="center" vexpand="true">'"$(give_ws_xml)"'</box>'
+done

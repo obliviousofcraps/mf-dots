@@ -1,0 +1,179 @@
+ <eww>
+	 <definitions>
+	    <def name="player">
+            <box orientation="h" space-evenly="true">
+                <box class="song-data" orientation="v" space-evenly="false">
+                    <box class="song-title" orientation="h" space-evenly="false">
+                        <box class="musicon">󰎇</box>
+                        <box class="song">{{song_title}}</box>
+                    </box>
+                    <box class="song-artist" orientation="h" space-evenly="false">
+                        <box class="musicon">󰀄</box>
+                        <box class="song">{{song_artist}}</box>
+                    </box>
+                </box>
+             </box>
+        </def>
+        <def name="player-buttons">
+			<box class="player-btns" orientation="v" halign="center">
+				<button class="player-btn" onclick="mpc prev">󰒮</button>
+				<button class="toggle" onclick="mpc toggle" style="background-image: url('{{music_status}}');"></button>
+				<button class="player-btn" onclick="mpc next">󰒭</button>
+			</box>
+        </def>
+        <def name="player-art">
+			<box orientation="v" space-evenly="true">
+				<box class="song-art" style="background-image: url('{{art}}');"></box>
+			</box>
+        </def>
+        <def name="launcher">
+            <box orientation="v" space-evenly="true">
+                <box class="launcher" orientation="v" space-evenly="true">
+                    <button onclick="setsid -f rofi -show drun" style="background-image:url('/home/aidoneus/.icons/Crayons/nexa_iconpack.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable " style="background-image:url('/home/aidoneus/.icons/Kamijara/vivaldi_browser.png')"></button>
+                    <button onclick="setsid -f firefox " style="background-image:url('/home/aidoneus/.icons/Crayons/firefox_nightly.png')"></button>
+                    <button onclick="setsid -f kitty -d ~" style="background-image:url('/home/aidoneus/.icons/Crayons/termux.png')"></button>
+                    <button onclick="setsid -f thunar ~" style="background-image:url('/home/aidoneus/.icons/Crayons/filemanager_plus.png')"></button>
+                </box>
+            </box>
+        </def>
+        <def name="today">
+            <box orientation="v">
+                <box class="date"></box>
+            </box>
+        </def>
+        <def name="time">
+            <box orientation="v" space-evenly="true">
+                <box orientation="h" class="time">
+                    <box class="hour">{{hour}}</box>
+                    <box class="dot-dot">:</box>
+                    <box class="minute">{{minute}}</box>
+                </box>
+            </box>
+        </def>
+        <def name="face">
+            <box orientation="h" space-evenly="true">
+                <box orientation="v" class="profile">
+                    <box class="profile-icon"></box>
+                    <box class="profile-name">Hey {{profile_name}}!</box>
+                </box>
+            </box>
+        </def>
+        <def name="weather">
+            <box orientation="v" class="weather" space-evenly="true" halign="fill">
+                <box orientation="h" style="margin-left: -40px">{{weather_desc}}</box>
+                <box orientation="h">
+                    <box class="current-temp">{{current_temp}}°C</box>
+                </box>
+                <box orientation="v" class="feels-like">Feels like {{feels_like}}°</box>
+                <box orientation="h">
+                    <box class="humidity" style="color: #75c26d">󰖌</box>
+                    <box class="humidity-lit" style="margin-left: -12px">{{humidity}}</box>
+                    <box class="wind" style="color: #b97de3">󰖝</box>
+                    <box class="wind-lit">{{wind}}</box>
+                </box>
+            </box>
+        </def>
+        <def name="date">
+            <box orientation="v" class="date" halign="fill">
+                <box class="today" style="margin-left: -25px">Today</box>
+                <box orientation="h" style="font-size: 20px;">
+                    <box class="to-date">{{to_date}}</box>
+                    <box class="month" style="margin-left: -10px;">{{month}}</box>
+                </box>
+                <box class="day" style="font-size: 18px;margin-left: -22px;">{{day}}</box>
+            </box>
+        </def>
+        <def name="battery">
+            <box orientation="h" class="battery">
+                <scale min="0" max="101" class="battery-prog" value="{{rem_batt}}"/>
+            </box>
+        </def>
+    </definitions>
+    
+    <!--variables-->
+    
+    <variables>
+		<script-var name="art" interval="2s">~/.config/eww/scripts/echoSongArt</script-var>
+		<script-var name="music_status" interval="1s">bash -c '~/.config/eww/scripts/music-status'</script-var>
+        <script-var name="song_title" interval="2s">bash -c '~/.local/bin/scripts/music-controller.sh title'| cut -c 1-22</script-var>
+        <script-var name="song_artist" interval="2s">bash -c '~/.local/bin/scripts/music-controller.sh artist'| cut -c 1-22</script-var>
+        <script-var name="profile_name">cat /proc/sys/kernel/hostname</script-var>
+
+        <script-var name="minute" interval="10s">date "+%M"</script-var>
+        <script-var name="hour" interval="5m">date "+%H"</script-var>
+
+        <!--weather-->
+        <script-var name="current_temp" interval="10m">bash -c 'scripts/weather current_temp'</script-var>
+        <script-var name="feels_like" interval="10m">bash -c 'scripts/weather feels_like'</script-var>
+        <script-var name="weather_desc" interval="10m">bash -c 'scripts/weather weather_desc'</script-var>
+        <script-var name="humidity" interval="10m">bash -c 'scripts/weather humidity'</script-var>
+        <script-var name="wind" interval="10m">bash -c 'scripts/weather wind'</script-var>
+
+        <!--date-->
+        <script-var name="to_date" interval="10m">date | cut -d " " -f 3-4</script-var>
+        <script-var name="month" interval="10m">date | cut -d " " -f 2</script-var>
+        <script-var name="day" interval="10m">date | cut -d " " -f 1</script-var>
+        
+        <script-var name="rem_batt" interval="2m">\cat /sys/class/power_supply/BAT0/capacity</script-var>
+    </variables>
+    
+    <!--windows-->
+    
+    <windows>
+		<window name="player" stacking="bg">
+            <geometry x="15px" y="665px" width="205px" height="80px"/>
+            <widget>
+                <player/>
+            </widget>
+        </window>
+        <window name="player-buttons" stacking="bg">
+			<geometry x="15px" y="507px" width="35px" height="150px"/>
+			<widget>
+				<player-buttons/>
+			</widget>
+        </window>
+        <window name="player-art" stacking="bg">
+			<geometry x="70px" y="507px" width="150px" height="150px"/>
+			<widget>
+				<player-art/>
+			</widget>
+        </window>
+        <window name="launcher" stacking="bg">
+            <geometry x="174px" y="45px" width="46px" height="200px"/>
+            <widget>
+                <launcher/>
+            </widget>
+        </window>
+        <window name="time" stacking="bg">
+            <geometry x="15px" y="400px" width="205px" height="100px"/>
+            <widget>
+                <time/>
+            </widget>
+        </window>
+        <window name="pfile" stacking="bg">
+            <geometry x="15px" y="45px" width="152px" height="200px"/>
+            <widget>
+                <face/>
+            </widget>
+        </window>
+        <window name="weather" stacking="bg">
+            <geometry x="15px" y="252px" width="113px" height="80px"/>
+            <widget>
+                <weather/>
+            </widget>
+        </window>
+        <window name="date" stacking="bg">
+            <geometry x="135px" y="252px" width="85px" height="140px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+        <window name="battery" stacking="bg">
+            <geometry x="230px" y="45px" width="120px" height="60px"/>
+            <widget>
+                <battery/>
+            </widget>
+        </window>
+    </windows>
+</eww>

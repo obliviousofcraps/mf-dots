@@ -1,0 +1,65 @@
+# Dunst Config - Dark
+# --------------------
+
+[global]
+monitor = 0
+follow = mouse
+geometry = "300x6-16+40"
+indicate_hidden = yes
+shrink = yes
+transparency = 0
+separator_height = 4
+padding = 12
+horizontal_padding = 12
+frame_width = 5
+frame_color = "#9a9fa0"
+separator_color = "#20242d"
+sort = no
+idle_threshold = 120
+font = Iosevka FT 9
+line_height = 6
+notification_height = 1
+markup = full
+format = "<b>%s</b>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = yes
+show_indicators = yes
+icon_position = left
+max_icon_size= 80
+sticky_history = no
+history_length = 6
+browser = firefox
+always_run_script = true
+title = Dunst
+class = Dunst
+corner_radius = 0 
+# icon_path = /usr/share/icons/Papirus-Custom/48x48/actions/:/usr/share/icons/Papirus-Custom/48x48/apps/:/usr/share/icons/Papirus-Custom/48x48/devices/:/usr/share/icons/Papirus-Custom/48x48/emblems/:/usr/share/icons/Papirus-Custom/48x48/emotes/:/usr/share/icons/Papirus-Custom/48x48/mimetypes/:/usr/share/icons/Papirus-Custom/48x48/places/:/usr/share/icons/Papirus-Custom/48x48/status/
+
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+Escape
+context = ctrl+shift+period
+
+[urgency_low]
+timeout = 3
+background = "#20242d"
+foreground = "#edfefe"
+
+[urgency_normal]
+timeout = 6
+background = "#20242d"
+foreground = "#edfefe"
+
+[urgency_critical]
+timeout = 0
+background = "#20242d"
+foreground = "#edfefe"

@@ -1,0 +1,50 @@
+# vim:fileencoding=utf-8:ft=conf
+
+
+set selection-clipboard clipboard
+set smooth-scroll "true"
+set guioptions none
+set highlight-active-color "#C3AFF7"
+set font "JetBrainsMono Nerd Font Mono Bold 9"
+
+#colorscheme
+
+set default-bg                  "#1e212a"
+set default-fg                  "#D8DEE9"
+
+set statusbar-fg                "#a7bdfb"
+set statusbar-bg                "#272c38"
+
+set inputbar-bg                 "#272c38" 
+set inputbar-fg                 "#BF616A"
+
+set notification-warning-bg     "#EBCB8B"
+set notification-warning-fg     "#272c38"
+
+set highlight-color             "#81A1C1"
+set highlight-active-color      "#81A1C1"
+
+set completion-highlight-fg     "#BF616A"
+set completion-highlight-bg     "#272c38"
+
+set completion-bg               "#20242d"
+set completion-fg               "#D8DEE9" 
+
+set notification-bg             "#D8DEE9"
+set notification-fg             "#20242d"
+
+set recolor-darkcolor 			"#D8DEE9" 
+set recolor-lightcolor          "#20242d"
+set recolor                     "true"
+
+# setting recolor-keep true will keep any color your pdf has.
+# if it is false, it'll just be black and white
+set recolor-keephue             "true"
+
+set adjust-open "width"
+
+set window-title-home-tilde "true"
+set statusbar-basename "true"
+
+set window-height 760
+set window-width 794
