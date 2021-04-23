@@ -44,10 +44,18 @@ These are some of the applications that I use in my current setup.
 - **Display Manager**: Slim (slim provide slimlock for lockscreen too.)
 ### :camera: **Screenshot**
 <br/>
+
+**Dark Theme :**
 <p>
   <img src="https://i.ibb.co/XVNKD6x/preview.png" alt="Dark-setup">
 </p>
 <br/>
+
+**Light Theme :**
+<p>
+  <img src="https://i.ibb.co/bvfYdc8/preview-light.png" alt="Light-setup">
+</p>
+</br>
 
 ### :rice_scene: **Widget Setup**
 In order to use the widgets you need eww which you can get from [here](https://github.com/elkowar/eww).To install eww to your system you will need rust toolchain nightly. Once you have it you can follow these steps:  
