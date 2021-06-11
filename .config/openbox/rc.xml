@@ -3,8 +3,8 @@
         Copy the file to $HOME/.config/openbox/ instead. -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
-    <strength>50</strength>
-    <screen_edge_strength>45</screen_edge_strength>
+    <strength>5</strength>
+    <screen_edge_strength>80</screen_edge_strength>
   </resistance>
   <focus>
     <focusNew>yes</focusNew>
@@ -154,10 +154,10 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
-    <left>0</left>
-    <right>0</right>
+    <top>30</top>
+    <bottom>10</bottom>
+    <left>10</left>
+    <right>10</right>
   </margins>
   <dock>
     <position>Top</position>
@@ -180,9 +180,14 @@
   <keyboard><chainQuitKey>C-g</chainQuitKey>
   
 # Toggle Decorations
-  <keybind key="C-S-d"><action name="ToggleDecorations"/></keybind>
-  
-# Desktop Switching
+      <keybind key="C-S-d"><action name="ToggleDecorations"/></keybind>
+
+<!--Window Resizing-->
+      <!--<keybind key="W-r"><action name="Resize"/></keybind>--> 
+      <keybind key="W-S-j"><action name="Resize"/><edge>left</edge></keybind>
+      <keybind key="W-S-k"><action name="Resize"/><edge>right</edge></keybind>
+ 
+  # Desktop Switching
 
   <keybind key="W-1"><action name="GoToDesktop"><to>1</to></action></keybind>
   <keybind key="W-2"><action name="GoToDesktop"><to>2</to></action></keybind>
@@ -203,9 +208,10 @@
   <keybind key="W-d"><action name="ToggleShowDesktop"/></keybind>
   <keybind key="W-q"><action name="Close"/></keybind>
   <keybind key="A-Escape"><action name="Lower"/><action name="FocusToBottom"/><action name="Unfocus"/></keybind>
-  <keybind key="W-Up"><action name="Maximize"/><action name="Maximize"/><action name="Maximize"/></keybind>
+  <keybind key="W-Up"><action name="ToggleMaximize"/></keybind>
   <keybind key="W-Down"><action name="Minimize"/><action name="Minimize"/><action name="Iconify"/></keybind>
   <keybind key="W-space"><action name="ShowMenu"><menu>client-menu</menu></action></keybind>
+  <keybind key="W-A-space"><action name="ShowMenu"><menu>root-menu</menu></action></keybind>
   <keybind key="A-Tab"><action name="NextWindow"><finalactions><action name="Focus"/><action name="Raise"/><action name="Unshade"/></finalactions></action></keybind>
   <keybind key="A-S-Tab"><action name="PreviousWindow"><finalactions><action name="Focus"/><action name="Raise"/><action name="Unshade"/></finalactions></action></keybind>
 <!--  <keybind key="C-A-Tab"><action name="NextWindow"><panels>yes</panels><desktop>yes</desktop><finalactions><action name="Focus"/><action name="Raise"/><action name="Unshade"/></finalactions></action></keybind>-->
@@ -252,16 +258,25 @@
     <keybind key="XF86MonBrightnessDown"><action name="Execute"><command>bash -c '~/.local/bin/scripts/change-brightness down'</command></action></keybind>
     <keybind key="0x43"><action name="Execute"><command>brightnessctl set 0%</command></action></keybind>
     
-<!-- Window Tiling: Emulates Windows 7 Snap feature JASON CAVETT -->
+<!-- Window Tiling -->
 
-	<keybind key="W-Left"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width></action><action name="MoveToEdge"><direction>west</direction></action></keybind>
-	<keybind key="W-Right"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width></action><action name="MoveToEdge"><direction>east</direction></action></keybind>
+    <keybind key="W-Left"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width><x>+-0</x></action></keybind>
+    <keybind key="W-Right"><action name="UnmaximizeFull"/><action name="MaximizeVert"/><action name="MoveResizeTo"><width>50%</width><x>-0</x></action></keybind>    
+    <keybind key="W-C-a"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><width>50%</width><height>50%</height><x>+-0</x><y>+-0</y></action></keybind>
+    <keybind key="W-C-z"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><width>50%</width><height>50%</height><x>+-0</x><y>-0</y></action></keybind>
+    <keybind key="W-C-s"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><width>50%</width><height>50%</height><x>-0</x><y>+-0</y></action></keybind>
+    <keybind key="W-C-x"><action name="UnmaximizeFull"/><action name="MoveResizeTo"><width>50%</width><height>50%</height><x>-0</x><y>-0</y></action></keybind>
+
+    <keybind key="W-C-Right"><action name="MoveRelative"><x>1</x><y>0</y></action></keybind>
+    <keybind key="W-C-Up"><action name="MoveRelative"><x>0</x><y>-1</y></action></keybind>
+    <keybind key="W-C-Left"><action name="MoveRelative"><x>-1</x><y>0</y></action></keybind>
+    <keybind key="W-C-Down"><action name="MoveRelative"><x>0</x><y>1</y></action></keybind>
 	
 #Keybindings for running applications
 
 	<keybind key="W-Return"><action name="Execute"><startupnotify><enabled>true</enabled><name>xfce4-terminal</name></startupnotify><command>xfce4-terminal</command></action></keybind>
 	<keybind key="W-e"><action name="Execute"><startupnotify><enabled>true</enabled><name>thunar</name></startupnotify><command>thunar</command></action></keybind>
-	<keybind key="W-x"><action name="Execute"><startupnotify><enabled>true</enabled><name>kitty</name></startupnotify><command>kitty</command></action></keybind>
+	<keybind key="W-t"><action name="Execute"><startupnotify><enabled>true</enabled><name>kitty</name></startupnotify><command>kitty</command></action></keybind>
 	<keybind key="W-S-r"><action name="Execute"><startupnotify><enabled>true</enabled><name>reconfigure</name></startupnotify><command>openbox --reconfigure</command></action></keybind>
 	<keybind key="W-b"><action name="Execute"><startupnotify><enabled>true</enabled><name>firefox</name></startupnotify><command>firefox</command></action></keybind>
 	<keybind key="W-v"><action name="Execute"><startupnotify><enabled>true</enabled><name>Vivaldi</name></startupnotify><command>vivaldi-stable</command></action></keybind>
@@ -278,8 +293,11 @@
 	
 #	Screenshot
 	
-    <keybind key="0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M.png' -q 100 -e 'mv $f ~/Documents/Snapshots/ ; notify-send Screenshot -i ~/Documents/Snapshots/$f -u normal "Snapshot Taken"'</command></action></keybind>
-	<keybind key="C-0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>bash -c '~/.local/bin/scripts/screenshot.sh'</command></action></keybind>
+    <keybind key="0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M_%S.png' -q 100 -e 'mv $f ~/Pictures/Snapshots/ ; notify-send Screenshot -i ~/Pictures/Snapshots/$f -u normal "Snapshot Taken"'</command></action></keybind>
+    <keybind key="C-S-0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>bash -c '~/.local/bin/scripts/screenshot.sh'</command></action></keybind>
+    <keybind key="C-0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>bash -c '~/.local/bin/scripts/select-shot.sh'</command></action></keybind>
+    <keybind key="C-A-0xDA"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>bash -c '~/.local/bin/scripts/shadow_shot.sh'</command></action></keybind>
+
     <!--	<keybind key="S-C-f"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M.png' -u -b -e 'mv $f ~/Documents/Snapshots/'</command></action></keybind>
 	<keybind key="C-S-1"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M.png' -cd 10 -q 100 -e 'mv $f ~/Documents/Snapshots/'</command></action></keybind>
 	<keybind key="C-S-2"><action name="Execute"><startupnotify><enabled>true</enabled><name>screenshot</name></startupnotify><command>scrot 'snap_%y_%m_%d_%H_%M.png' -cd 2 -q 100 -e 'mv $f ~/Documents/Snapshots/'</command></action></keybind>
@@ -743,7 +761,10 @@
   
 
   # end of the example
--->
+    -->
+    <application title="Mozilla Firefox">
+      <decor>no</decor>
+    </application>
     <application name="vivaldi-stable">
       <desktop>3</desktop>
     </application>
@@ -760,14 +781,24 @@
         <y>center</y>
       </position>
     </application>
-    <application name="eww">
-      <desktop>1</desktop>
-    </application>
     <application name="code-oss">
       <decor>no</decor>
+      <!-- <desktop>4</desktop> -->
     </application>
-    <!--<application name="notion-app">
-		<maximized>true</maximized>
-	</application>-->
+    <application name="org.pwmt.zathura">
+      <decor>no</decor>
+      <position force="yes">
+        <x>+-0</x>
+        <y>0</y>
+      </position>
+    </application>
+    <application name="notion">
+      <maximized>true</maximized>
+      <decor>no</decor>
+      <position force="yes">
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
   </applications>
 </openbox_config>

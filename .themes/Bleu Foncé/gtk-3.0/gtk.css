@@ -1123,7 +1123,7 @@ toolbar.osd, .app-notification, frame.documents-dropdown {
   padding: 4px;
   border-radius: 6px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 1px rgba(255, 255, 255, 0.1);
-  background-color: #3B4252;
+  background-color: #20242d;
 }
 
 toolbar.osd:backdrop, .app-notification:backdrop, frame.documents-dropdown:backdrop {
@@ -3024,7 +3024,7 @@ overshoot.right {
 
 undershoot.top {
   background-color: transparent;
-  background-image: linear-gradient(to left, rgba(50, 63, 78, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
+  background-image: linear-gradient(to left, rgba(29, 33, 42, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
   padding-top: 1px;
   background-size: 12px 1px;
   background-repeat: repeat-x;
@@ -3034,7 +3034,7 @@ undershoot.top {
 
 undershoot.bottom {
   background-color: transparent;
-  background-image: linear-gradient(to left, rgba(50, 63, 78, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
+  background-image: linear-gradient(to left, rgba(29, 33, 42, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
   padding-bottom: 1px;
   background-size: 12px 1px;
   background-repeat: repeat-x;
@@ -3044,7 +3044,7 @@ undershoot.bottom {
 
 undershoot.left {
   background-color: transparent;
-  background-image: linear-gradient(to top, rgba(50, 63, 78, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
+  background-image: linear-gradient(to top, rgba(29, 33, 42, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
   padding-left: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -3054,7 +3054,7 @@ undershoot.left {
 
 undershoot.right {
   background-color: transparent;
-  background-image: linear-gradient(to top, rgba(50, 63, 78, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
+  background-image: linear-gradient(to top, rgba(29, 33, 42, 0.3) 50%, rgba(248, 248, 242, 0.3) 50%);
   padding-right: 1px;
   background-size: 1px 12px;
   background-repeat: repeat-y;
@@ -3845,7 +3845,7 @@ headerbar .nautilus-canvas-item.subtitle, .budgie-notification .nautilus-canvas-
   border-width: 1px;
   border-color: rgba(0,0,0,0);
   border-radius: 7px 7px 0 0;
-  background-color: rgba(50, 63, 78, 0.9);
+  background-color: rgba(29, 33, 42, 0.9);
   background-clip: border-box;
   transition: all 100ms cubic-bezier(0, 0, 0.2, 1), border-width 0;
 }
@@ -5364,7 +5364,7 @@ na-tray-applet {
 /* multimedia OSD */
 MsdOsdWindow.background.osd {
   border-radius: 6px;
-  background-color: rgba(50, 63, 78, 0.9);
+  background-color: rgba(29, 33, 42, 0.9);
   color: #F9F9F9;
 }
 

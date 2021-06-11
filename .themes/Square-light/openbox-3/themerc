@@ -1,5 +1,5 @@
 # Menu
-menu.border.width: 18
+menu.border.width: 14
 menu.overlap.x: -22
 menu.overlap.y: -10
 
@@ -149,7 +149,7 @@ menu.title.text.font:shadow=n
 # Everything else
 border.width: 0
 padding.width: 8
-padding.height: 8
+padding.height: 6
 window.handle.width: 6
 window.client.padding.width: 0
 window.label.text.justify: center

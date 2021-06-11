@@ -1,28 +1,28 @@
 
 # Menu
 menu.items.bg: flat
-menu.items.bg.color: #272C38
+menu.items.bg.color: #1d212a
 
 menu.items.active.bg: Solid Flat
-menu.items.active.bg.color: #EBCB8B
+menu.items.active.bg.color: #1d212a
 
-menu.items.active.text.color: #272C38
+menu.items.active.text.color: #fbdf90
 menu.items.disabled.text.color: #565656
 menu.items.text.color: #ffffff
 menu.items.font: shadow=n
 
 menu.title.bg: Solid Flat
-menu.title.bg.color: #272c38
-menu.title.text.color: #e3e3e3
+menu.title.bg.color: #1d212a
+menu.title.text.color: #FD9C9E
 menu.title.text.font: shadow=n
 menu.title.text.justify: center
 
 menu.overlap: -22
-menu.separator.color: #272c38
+menu.separator.color: #1d212a
 menu.separator.padding.height: 5
 
 menu.border.width: 14
-menu.border.color: #272c38
+menu.border.color: #1d212a
 
 
 # Window - titlebar

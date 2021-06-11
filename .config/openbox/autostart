@@ -16,6 +16,7 @@
 #
 #xfce-mcs-manager &
 
+
 #Brightness
 brightnessctl set 10%
 
