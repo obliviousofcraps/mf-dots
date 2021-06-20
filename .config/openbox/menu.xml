@@ -2,11 +2,6 @@
 
 <openbox_menu>
 
-<menu id="root-menu-71489"/>
-<menu id="inet"/>
-<menu id="multimedia"/>
-<menu id="root-menu-161838"/>
-<menu id="settings-1"/>
 <menu id="new menu 1" label="Openbox">
 	<separator label="Openbox"/>
 	<item label="Reconfigure" icon="/home/aidoneus/.icons/Crayons/backup.png">
@@ -48,11 +43,6 @@
 		</action>
 	</item>
 	<separator/>
-	<menu id="root-menu-71489" icon="/home/aidoneus/.icons/Crayons/anymote_smart_remote.png"/>
-	<menu id="inet" icon="/home/aidoneus/.icons/Crayons/wifi_map.png"/>
-	<menu id="multimedia" icon="/home/aidoneus/.icons/Crayons/music_speed_changer.png"/>
-	<menu id="root-menu-161838" icon="/home/aidoneus/.icons/Crayons/touchscreen_repair.png"/>
-	<menu id="settings-1" icon="/home/aidoneus/.icons/Crayons/settings.png"/>
 	<menu id="new menu 1" icon="/home/aidoneus/.icons/Crayons/dropbox.png"/>
 	<separator/>
 	<item label="Exit" icon="/home/aidoneus/.icons/Crayons/bhim.png">

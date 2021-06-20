@@ -27,6 +27,9 @@ alias yaysearch='yay -Ss'
 alias polylaunch='~/.config/polybar/launch.sh'
 alias polykill='killall -q polybar'
 alias speedtest='speedtest-cli'
+alias nv='nvim'
+alias tldr='cht.sh'
+alias cd='z'
 
 #Git
 alias ga="git add"
@@ -45,6 +48,7 @@ alias gbr='git branch'
 alias gch='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
+alias gsw='git switch'
 
 #protonvpn
 alias vpnc="sudo protonvpn c"
@@ -56,20 +60,29 @@ alias vpncf="sudo protonvpn c -f"
 alias bloks='~/.color-toys/bloks'
 alias elfman='~/.color-toys/elfman'
 alias fetch='neofetch'
+alias nerdinfo='~/.color-toys/nerdinfo.sh'
 alias colorblocks='~/.color-toys/colorblocks'
 
-alias menu.xml='vim ~/.config/openbox/menu.xml'
-alias cat=bat
+alias menu.xml='nvim ~/.config/openbox/menu.xml'
+#alias cat=bat
 
 #configs
 
-alias picomconf='vim ~/.config/picom.conf'
-alias mpconf='vim ~/.ncmpcpp/config'
-alias neoconf='vim ~/.config/neofetch/config.conf'
-alias dunstconf='vim ~/.config/dunst/dunstrc'
-alias redshiftconf='vim ~/.config/redshift/redshift.conf'
-alias kittyconf='vim ~/.config/kitty/kitty.conf'
+alias piconf='nvim ~/.config/picom.conf'
+alias ncconf='nvim ~/.ncmpcpp/config'
+alias neoconf='nvim ~/.config/neofetch/config.conf'
+alias dunstconf='nvim ~/.config/dunst/dunstrc'
+alias redshiftconf='nvim ~/.config/redshift/redshift.conf'
+alias kittyconf='nvim ~/.config/kitty/kitty.conf'
+alias gtkconf='nvim ~/.config/gtk-3.0/settings.ini'
 
 
 #aaaaaa
 alias gh='history|grep'
+
+#cd
+alias ..='cd ..'
+alias ....='cd ../..'
+alias ......='cd ../../..'
+alias ........='cd ../../../..'
+
