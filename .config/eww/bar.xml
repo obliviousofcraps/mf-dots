@@ -1,13 +1,13 @@
 <eww>
     <includes>
-        <!-- Including external Files -->
+		<file path="./script-vars.xml"/>
     </includes>
 
     <definitions>
         <!-- Defining blocks and windows-->
         <!-- ::::::: BAR BEGINS ::::::: -->
         <def name="bar">
-            <box orientation="h" hexpand="true">
+            <box orientation="h" hexpand="false" vexpand="false">
                 <workspaces/>
                 <mpd-title/>
                 <systems/>
@@ -17,14 +17,21 @@
         <!-- System information block-->
         <def name="systems">
             <box class="systems" orientation="h" space-evenly="false" halign="end">
+				<battery-sli/>
                 <slider-vol/>
-                <wifi-name/>
                 <time/>
             </box>
         </def>
         <!-- Workspaces -->
         <def name="workspaces">
             <literal content="{{current_ws}}"></literal>
+        </def>
+        <!-- Battery -->
+        <def name="battery-sli">
+			<box orientation="h" class="battery-sli" space-evenly="false">
+                <box class="label-batt">󱈑</box>
+                <scale min="0" max="101" class="battery-rem" value="{{rem_batt}}"/>
+            </box>
         </def>
         <!-- Volume Slider-->
         <def name="slider-vol">
@@ -36,7 +43,7 @@
        
         <def name ="wifi-name">
 			<box class="wifi-name">
-				<label class="network-label" onclick="network-manager-dmenu" style="margin-right: 10px;" text="{{wifi_label}}"/>
+				<label class="network-label" style="margin-right: 10px;" text="{{network_label}}"/>
 			</box>
         </def>
         <def name="time">
@@ -44,37 +51,20 @@
             <box class="time">{{month}} {{number_day}} | {{hour}}:{{min}}</box>
         </def>
         <def name="mpd-title">
-        <box class="mpd-title" style="margin-left: 6rem;" orientation="h" space-evenly="false">
-                <box class="musicon">󰎇</box>
-                <box class="song">{{current_title}} | {{current_artist}}</box>
+        <box class="mpd-title" style="margin-left: 5rem;" orientation="h" space-evenly="false">
+                <box class="musicon">{{music_icon}}</box>
+                <box class="song">{{song_title}}{{music_separator}}{{song_artist}}</box>
          </box>
         </def>
     </definitions>
 
     <variables>
-        <!-- Put your <script-var> and <var>'s in here -->
-        <script-var name="current_ws" interval="500ms">bash ~/.config/eww/scripts/get-current-ws</script-var>
-        <script-var name="volume" interval="16ms">~/.config/eww/scripts/getvol</script-var>
-        <!--Date vars-->
-        <script-var name="number_day" interval="5h">date "+%d"</script-var>
-        <script-var name="month" interval="10h">date "+%b"</script-var>
-        <script-var name="min" interval="10s">date "+%M"</script-var>
-        <script-var name="hour" interval="1m">date "+%H"</script-var>
-        <script-var name="year_full" interval="15h">date "+%Y"</script-var>
-
-        <!--RAM var-->
-        <script-var name="ram_used">~/.config/eww/scripts/getram</script-var>
-
-        <script-var name="current_title" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh title' | cut -c 1-22</script-var>
-        <script-var name="current_artist" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh artist' | cut -c 1-22</script-var>
-        
-        <script-var name="wifi_label" interval="100ms">bash -c 'scripts/network status'</script-var>
     </variables>
     
     <windows>
         <!-- Put your window blocks here -->
-        <window name="bar" screen="0">
-            <geometry x="1%" y="3px" width="98%" height="30px"/>
+        <window name="bar" stacking="bg">
+            <geometry x="-5" y="-1" width="101%" height="30px"/>
             <reserve side="top" distance="4%"/>
             <widget>
                 <bar/>

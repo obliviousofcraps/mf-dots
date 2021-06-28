@@ -1,91 +1,190 @@
+//@import url("path/to/common.css");
+
+// bar css
+// GTK CSS File for Eww
 * {
+    all: unset; //Unsets everything so you can style everything from scratch
+}
+
+window {
+    background-color: #1d212a;
+    color: #626b7e;
+    font-family: "Iosevka Oblivion";
+}
+
+button {
     all: unset;
+    background-color: #1d212a;
+    padding: 10px;
 }
 
-.player {
-	background-color:#1d212a;
-    padding: 0px 3px;
-    min-width: 200px;
-	
+// Styles on classes (see eww.xml for more information)
+
+.systems slider {
+    all: unset;
+    color: #89e19c;
 }
 
-.player-art {
-	background-color: #1d212a;
+.slider-vol scale trough highlight {
+    all: unset;
+    background-color: #fc8993;
+    color: #000000;
+    border-radius: 10px;
 }
 
-.song-art {
-    background-size: 150px;
-    border-radius: 5px;
+.slider-vol scale trough {
+    all: unset;
+    background-color: #4e4e4e;
+    border-radius: 50px;
+    min-height: 10px;
+    min-width: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
-
-.song-data {
-    font-size: 14px;
-    font-weight: bold;
-    color: #e3e3e3;
-
-    margin: 18px 0px 0px 0px;
+.slider-ram scale trough highlight {
+    all: unset;
+    background-color: #d35d6e;
+    color: #000000;
+    border-radius: 10px;
 }
 
-.song-title, .song-artist {
-    font-family: "Sarasa Term HC", "Stick";
-    font-size: 14px;
-    font-weight: bold;
-    padding-bottom: 10px;
+.slider-ram scale trough {
+    all: unset;
+    background-color: #4e4e4e;
+    border-radius: 50px;
+    min-height: 3px;
+    min-width: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.label-ram {
+    font-size: 20px;
+    color: #d990cd;
+}
+
+.label-vol {
+    color: #89e19c;
+    font-size: 22px;
+}
+.time {
+    padding: 0 20px 0 0px;
+    color: #c2c6c3;
+}
+
+.workspaces {
     padding-left: 10px;
+}
+.workspaces button:hover {
+    color: #d35d6e;
+}
+// Active WSP = Current WSP
+.workspaces .active_wsp {
+    color: #fc8993;
+}
+// Full WSP = Windows are in a workspace
+.workspaces .full_wsp {
+    color: #4e4e4e;
+}
+
+.mpd-title .song {
+    color: #c2c6c3;
+}
+
+.network-label {
+    color: #c2c6c3;
+}
+
+.battery-sli scale trough highlight {
+    all: unset;
+    background-image: linear-gradient(90deg, hsla(0, 100%, 77%, 1) 0%, hsla(133, 87%, 77%, 1) 40%);
+    color: #000000;
+    border-radius: 10px;
+}
+
+.battery-sli scale trough {
+    all: unset;
+    background-color: #4e4e4e;
+    border-radius: 50px;
+    min-height: 10px;
+    min-width: 50px;
+    margin-left: 8px;
+    margin-right: 10px;
+}
+
+.label-batt {
+    color: #a7bdfb;
+    font-size: 17px;
+    padding-bottom: 2px;
+}
+
+.battery-level-st {
+    background-color: #f9f9f9;
+    color: #212121;
 }
 
 .musicon {
-    color: #ff6969;
-    font-family: "Material Design Icons Desktop";
+    color: #fc8993;
+    //font-family: "Material Design Icons Desktop";
     font-size: 14px;
-    padding-right: 6px;
 }
 
-.song-artist .musicon {
-    color: #4eff96;
+//Widgets full
+.profile {
+    background-color: #1d212a;
+    padding: 30px 25px 10px 25px;
 }
 
-.player-buttons {
-	background-color: #1d212a;
+.profile-icon {
+    background-image: url("/home/aidoneus/Downloads/Images/profile.png");
+    background-size: 120px;
+    background-repeat: no-repeat;
+    margin-bottom: -30px;
+    margin-left: 25px;
 }
 
-.player-btns button {
-    color: #a7bdfb;
-    font-family: "Material Design Icons Desktop";
+.profile-name {
+    font-family: "Sarasa Term J", "Rec Mono Casual";
     font-size: 18px;
-    margin: 0px 14px;
+    margin-top: 20px;
 }
 
-.player-btns .toggle {
-	background-size: 14px;
-    background-repeat: no-repeat;
-    margin-top: 18px;
-    margin-left: 17px;
+.hostname {
+    margin-bottom: -20px;
+    color: #dadada;
 }
 
-.player-btns button:hover {
-    color: #95c4ce;
+.username {
+    font-family: "VictorMono Nerd Font Mono";
+    font-style: italic;
+    font-size: 14px;
+    color: #bbc4d9;
 }
 
-.launcher {
-    padding: 6px 4px 4px 4px;
-    background-color: #1d212a;
+.file-launcher {
+    padding: 6px;
+    font-size: 16px;
+    font-family: "Sarasa Term J";
 }
 
-.launcher button {
-    background-size: 30px;
-    background-repeat: no-repeat;
+.file-launcher button {
+    padding: 5px 20px;
+    color: #bbc4d9;
+    transition: all 100ms;
 }
 
-.time {
-    background-color: #1d212a;
-    padding: 0px 15px;
+.file-launcher button:hover {
+    background-color: #f2b4ba;
+    color: #3c414c;
 }
 
-.hour, .dot-dot, .minute {
+.hour,
+.dot-dot,
+.minute {
     font-family: "JetBrainsMonoMedium Nerd Font Mono", "HandyCasualCondensed-Regular";
-    font-size: 36px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .hour {
@@ -100,223 +199,173 @@
     color: #a7dbfd;
 }
 
-.profile {
-    background-color: #1d212a;
-    padding: 30px 25px 10px 25px;
-}
-
-.profile-icon {
-    background-image: url('/home/aidoneus/Downloads/Images/profile.png');
-    background-size: 120px;
-    background-repeat: no-repeat;
-    margin-bottom: -30px;
-    margin-left: 25px;
-}
-
-.profile-name {
-    font-family: 'Sarasa Term J', 'Rec Mono Casual';
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.hostname {
-    margin-bottom: -20px;
-    color: #dadada;
-}
-
-.username {
-    font-family: 'VictorMono Nerd Font Mono';
-    font-style: italic;
-    font-size: 14px;
-    color: #bbc4d9;
-}
-
 .weather {
-    min-width: 100px;
-    background-color: #1d212a;
-    background-image: url('/home/aidoneus/Pictures/malak-abstract-5k-r1.jpg');
-    background-repeat: no-repeat;
-    background-size: 270px;
-    background-position: top;
-    font-family: "Oswald";
-    padding: 10px;
+    padding: 20px; 
+    font-family: "Sarasa Term J";
+    font-size: 14px;
     color: #e3e3e3;
 }
 
-
-.current-temp {
-    margin-left: -50px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.wet-cond {
-    margin-left: -5px;
-}
-
-.feels-like {
-    margin-left: -25px;
-}
+//.current-temp {
+    //font-weight: bold;
+//}
 
 .date {
+    padding: 10px;
+}
+.date .month {
     background-color: #1d212a;
-    background-image: url('/home/aidoneus/Pictures/malak-abstract-5k-r1.jpg');
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-position: right;
-    font-family: 'Oswald';
+    font-family: "JetBrainsMonoMedium Nerd Font Mono";
+    font-weight: bold;
+    font-size: 18px;
     color: #e3e3e3;
-    padding: 10px;
 }
 
-.battery {
+.player-art {
     background-color: #1d212a;
 }
 
-.battery scale trough {
-    all: unset;
+.song-art {
+    background-size: 160px;
+    padding: 80px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+.launcher {
+    padding: 6px 4px 4px 10px;
     background-color: #1d212a;
-    color: #000000;
-    min-height: 50px;
 }
 
-.battery-prog trough highlight {
-    all: unset;
-    background-image: linear-gradient(90deg, hsla(0, 83%, 65%, 1) 20%, hsla(44, 93%, 77%, 1) 100%);
-    color: #000000;
-}
-
-.tools {
-    background-color: #1d212a;
-    padding: 0 10px;
-}
-
-.network-icon {
-    background-size: 20px;
-    background-position: center;
+.launcher button {
+    background-size: 35px;
     background-repeat: no-repeat;
 }
 
-.volume-icon {
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.rofi {
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.system {
-    background: #1d212a;
-    padding: 10px;
-}
-
-.system-info {
-    font-family: 'Sarasa Term HC';
-    color: #dadada;
-    font-size: 14px;
-    padding-left: 10px;
-}
-
-.syslabel {
+.player-btns button {
+    color: #a7bdfb;
     font-family: "Material Design Icons Desktop";
+    font-size: 26px;
+}
+
+.player-btns .toggle {
+    background-size: 20px;
+    margin-top: 14px;
+    background-repeat: no-repeat;
+}
+
+.player-btns button:hover {
+    color: #95c4ce;
+}
+
+.song-data {
     font-size: 14px;
-    margin-bottom: 3px;
+    font-weight: bold;
+    color: #e3e3e3;
 }
 
-calendar {
-    background-color: #1d212a;
+.song-title,
+.song-artist {
+    font-family: "Sarasa Term HC", "Stick";
+    font-size: 14px;
+    padding-left: 15px;
 }
 
-
-// bar css
-// GTK CSS File for Eww 
-* {
-  all: unset; //Unsets everything so you can style everything from scratch
+.musicon {
+    color: #ff6969;
+    font-family: "Material Design Icons Desktop";
+    font-size: 16px;
+    padding-right: 6px;
 }
 
-window {
-  background-color: #f9f9f9;
-  color: #ffd5cd;
-  font-family: "Iosevka FT";
+.song-artist .musicon {
+    color: #4eff96;
 }
 
-button {
-  all: unset;
-  background-color: #1d212a;
-  padding: 10px;
+.quotes {
+    font-size: 14px;
+    color: #dadada;
 }
 
-// Styles on classes (see eww.xml for more information)
-
-.systems slider {
-  all: unset;
-  color: #89e19c;
+.rofi,
+.screenshot {
+    background-size: 40px;
+    padding: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.slider-vol scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
-.slider-vol scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-.slider-ram scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
-.slider-ram scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-.label-ram {
-  font-size: 20px;
-  color: #d990cd;
+.power {
+    font-size: 43px;
+    padding: 9px;
+    color: #fc8993;
 }
 
-.label-vol {
-    color: #89e19c;
-    font-size: 20px;
-}
-.time {
-  padding-right: 10px;
-}
-.workspaces button:hover {
-  color: #D35D6E;
-}
-// Active WSP = Current WSP
-.workspaces .active_wsp {
-    color: #D35D6E;
-}
-// Full WSP = Windows are in a workspace
-.workspaces .full_wsp {
-    color: #4e4e4e;
+.lock-icon {
+    font-size: 36px;
+    padding: 22px;
 }
 
-.mpd-title .song {
-    color: #5e636f;
+.slider-bars scale {
+    padding-bottom: 25px;
 }
 
+//.slider-bars {
+    //padding-bottom: 10px;
+//}
 
+.slider-bars-batt scale trough highlight {
+    all: unset;
+    background-image: linear-gradient(360deg, hsla(0, 100%, 77%, 1) 30%, hsla(133, 87%, 77%, 1) 70%);
+    color: #000000;
+    border-radius: 50px;
+}
 
-.network-label {
-color: #5e636f;
+.slider-bars-vol scale trough highlight {
+    all: unset;
+    background-color: #fc8993;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.slider-bars-cpu scale trough highlight {
+    all: unset;
+    background-color: #fbdf90;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.slider-bars-cpu-temp scale trough highlight {
+    all: unset;
+    background-color: #a7bdfb;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.slider-bars-ram scale trough highlight {
+    all: unset;
+    background-color: #d990cd;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.slider-bars-bright scale trough highlight {
+    all: unset;
+    background-color: #fbe3eb;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.slider-bars scale trough {
+    all: unset;
+    background-color: #272c38;
+    border-radius: 50px;
+    min-height: 130px;
+    min-width: 10px;
+}
+
+.slider-bars label {
+    font-family: "Material Design Icons Desktop";
+    font-size: 18px;
 }

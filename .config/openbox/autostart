@@ -36,6 +36,9 @@ tint2 &
 tint2 -c ~/.config/tint2/pills-time.tint2rc & 
 tint2 -c ~/.config/tint2/pills-taskbar.tint2rc &
 tint2 -c ~/.config/tint2/pills-mpd.tint2rc &
+tint2 -c ~/.config/tint2/pills-power.tint2rc &
+tint2 -c ~/.config/tint2/pills-apps.tint2rc &
+
 
 #power-manager
 xfce4-power-manager &
@@ -55,6 +58,9 @@ clipit &
 
 #policy-manager
 lxpolkit &
+
+#gnome polkit
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Sessions Lock (time: minute)
 xautolock -time 10 -locker "lxlock" &

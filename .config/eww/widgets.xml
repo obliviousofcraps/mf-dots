@@ -1,0 +1,265 @@
+<eww>
+    <definitions>
+        
+        <def name="face">
+            <box orientation="h" space-evenly="true">
+                <box orientation="v" class="profile">
+                    <box class="profile-icon"></box>
+                    <box class="profile-name" orientation="v">
+                        <box class="hostname">Hey {{profile_name}}!</box>
+                        <box class="username">@obliviousofcraps</box>
+                    </box>
+                </box>
+            </box>
+        </def>
+
+        <def name="file-launcher">
+            <box class="file-launcher" orientation="v" valign="center" halign="center" spacing="5" space-evenly="false">
+                <button onclick="setsid -f thunar ~" >Home</button>
+                <button onclick="setsid -f thunar ~/Downloads" >Downloads</button>
+                <button onclick="setsid -f thunar ~/Documents" >Documents</button>
+                <button onclick="setsid -f thunar ~/Pictures" >Pictures</button>
+                <button onclick="setsid -f thunar ~/Music" >Music</button>
+                <button onclick="setsid -f thunar ~/MEGAsync Downloads" >Mega</button>
+            </box>
+        </def>
+
+        <def name="weather">
+            <box orientation="v" class="weather" space-evenly="false" spacing="14">
+                <label halign="center" class="current-temp" wrap="true" text="The current temperature is {{current_temp}}°C with {{weather_desc}}."/>
+                <box orientation="v" halign="center" class="feels-like">Feels like {{feels_like}}°C</box>
+                <box orientation="h" halign="center" class="wet-cond" space-evenly="false" spacing="10">
+                    <box class="humidity" style="color: #75c26d">󰖌</box>
+                    <box class="humidity-lit" style="margin-left: -5px">{{humidity}}</box>
+                    <box class="wind" style="color: #b97de3">󰖝</box>
+                    <box class="wind-lit">{{wind}}</box>
+                </box>
+            </box>
+        </def>
+        <def name="date">
+            <box orientation="h" class="date" space-evenly="false" spacing="8">
+                <box class="today" halign="center" style="color:#a7bdfb;font-family:'Material Design Icons Desktop';font-size: 20px;">󰃭</box>
+                <box orientation="v" halign="center" valign="center" space-evenly="false">
+                    <box class="month" halign="center">{{month}} {{number_day}}, {{day}} </box>
+                </box>
+            </box>
+        </def>
+
+        <def name="widget-time">
+            <box orientation="h" class="widget-time" valign="center" halign="center" space-evenly="false" spacing="10">
+                <box class="hour">{{hour}}</box>
+                <box class="dot-dot">:</box>
+                <box class="minute">{{min}}</box>
+            </box>
+        </def>
+
+        <def name="player-art">
+			<box orientation="v" space-evenly="false" spacing="5">
+                <box class="song-art" valign="center" halign="center" style="background-image: url('{{art}}');"></box>
+                <box class="player-btns" space-evenly="false" orientation="h" halign="center" valign="center" spacing="12">
+				    <button class="player-btn" onclick="mpc prev">󰒮</button>
+				    <button class="toggle" onclick="mpc toggle" style="background-image: url('{{music_status}}');"></button>
+				    <button class="player-btn" onclick="mpc next">󰒭</button>
+			    </box>
+			</box>
+        </def>
+
+        <def name="player">
+            <box orientation="h" valign="center" space-evenly="false">
+                <box class="song-data" spacing="8" orientation="v" space-evenly="false">
+                    <box class="song-title" orientation="h" space-evenly="false">
+                        <box class="musicon">󰎇</box>
+                        <box class="song">{{song_title}}</box>
+                    </box>
+                    <box class="song-artist" orientation="h" space-evenly="false">
+                        <box class="musicon">󰀄</box>
+                        <box class="song">{{song_artist}}</box>
+                    </box>
+                </box>
+             </box>
+         </def>
+
+        <def name="quotes">
+            <box class="quotes" orientation="h">
+                 <label limit="40" text="{{quotes}}"/>
+            </box>
+        </def>
+
+        <def name="launcher">
+            <box orientation="v" space-evenly="true">
+                <box class="launcher" orientation="h" space-evenly="true">
+                    <button onclick="setsid -f vivaldi-stable " style="background-image:url('/home/aidoneus/.icons/Custom-apks/Kamijara/vivaldi_browser.png')"></button>
+                    <button onclick="setsid -f firefox " style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/firefox_nightly.png')"></button>
+                    <button onclick="setsid -f kitty -d ~" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/termux.png')"></button>
+                    <button onclick="setsid -f thunar ~" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/filemanager_plus.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable https://discord.com/channels/@me" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/discord_alt1.png')"></button>
+                </box>
+                <box class="launcher" orientation="h" space-evenly="true">
+                    <button onclick="setsid -f vivaldi-stable github.com" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/github.png')"></button>
+                    <button onclick="./scripts/launch-spotify" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/spotify.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable https://reddit.com" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/reddit.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable https://youtube.com" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/youtube_music.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable https://twitter.com" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/tweetcaster.png')"></button>
+                </box>
+            </box>
+        </def>
+
+        <def name="rofi">
+            <box orientation="h" halign="center" valign="center" space-evenly="true">
+                <button class="rofi" onclick="setsid -f rofi -show drun" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/nexa_iconpack.png')"></button>
+            </box>
+        </def>
+        
+        <def name="screenshot">
+            <box orientation="h" halign="center" valign="center" space-evenly="true">
+                <button class="rofi" onclick="~/.local/bin/scripts/screenshot.sh" style="background-image:url('/home/aidoneus/.icons/Custom-apks/Crayons/instagram.png')"></button>
+            </box>
+        </def>
+
+        <def name="widget-lock">
+            <box orientation="h" halign="center" valign="center" space-evenly="true">
+                <button class="lock-icon" onclick="lxlock">󰌾</button>
+            </box>
+        </def>
+
+        <def name="power">
+            <box orientation="h" halign="center" valign="center" space-evenly="true">
+                <button class="power" onclick="~/.config/rofi/scripts/powermenu.sh">󰐥</button>
+            </box>
+        </def>
+
+        <def name="slider-bars">
+            <box orientation="h" vexpand="false" hexpand="false">
+                <box orientation="h" class="slider-bars" space-evenly="false" halign="center" valign="center" spacing="16">
+                    <box orientation="v" space-evenly="false" class="slider-bars-batt">
+                        <scale orientation="v" flipped="true" class="batt" active="false" max="101" value="{{rem_batt}}"/>
+                        <label text="󰋑"/>
+                    </box> 
+                    <box orientation="v" space-evenly="false" class="slider-bars-bright">
+                        <scale orientation="v" flipped="true" class="brightness" max="101" value="{{current_bright}}" onchange="brightnessctl set {}%"/>
+                        <label text="󰖨"/>
+                    </box>
+                    <box orientation="v" space-evenly="false" class="slider-bars-vol">
+                        <scale orientation="v" flipped="true" class="vol" min="0" max="101" value="{{volume}}" onchange="amixer -D pulse sset Master {}%"/>
+                        <label text="󱄠"/>
+                    </box>
+                    <box orientation="v" space-evenly="false" class="slider-bars-cpu">
+                        <scale orientation="v" flipped="true" class="cpu" active="false" max="60" value="{{EWW_CPU_USAGE.avg}}"/>
+                        <label text="󰍛"/>
+                    </box>
+                    <box orientation="v" space-evenly="false" class="slider-bars-cpu-temp">
+                        <scale orientation="v" flipped="true" class="cpu-temp" active="false" max="101" value="{{EWW_TEMPS.CPU}}"/>
+                        <label text="󰔏"/>
+                    </box>
+                    <box orientation="v" space-evenly="false" class="slider-bars-ram">
+                        <scale orientation="v" flipped="true" class="ram-usage" active="false" max="101" value="{{ram_used}}"/>
+                        <label text="󰘚"/>
+                    </box>
+                </box>
+            </box>
+        </def>
+
+
+    </definitions>
+
+    <windows>
+        
+        <window name="pfile" stacking="bg">
+            <geometry x="285px" y="150px" width="220px" height="250px"/>
+            <widget>
+                <face/>
+            </widget>
+        </window>
+
+        <window name="file-launcher" stacking="bg">
+            <geometry x="515px" y="150px" width="145px" height="250px"/>
+            <widget>
+                <file-launcher/>
+            </widget>
+        </window>
+
+        <window name="weather" stacking="bg">
+            <geometry x="670px" y="260px" width="220px" height="80px"/>
+            <widget>
+                <weather/>
+            </widget>
+        </window>
+
+        <window name="widget-time" stacking="bg">
+            <geometry x="670px" y="150px" width="220px" height="100px"/>
+            <widget>
+                <widget-time/>
+            </widget>
+        </window>
+
+        <window name="date" stacking="bg">
+            <geometry x="900px" y="150px" width="130px" height="70px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+
+        <window name="player-art" stacking="bg">
+			<geometry x="285px" y="410px" width="220px" height="250px"/>
+			<widget>
+				<player-art/>
+			</widget>
+        </window>
+
+        <window name="player" stacking="bg">
+            <geometry x="515px" y="540px" width="280px" height="70px"/>
+            <widget>
+                <player/>
+            </widget>
+        </window>
+
+        <window name="quotes">
+            <geometry x="515px" y="620px" width="280px" height="40px"/>
+            <widget>
+                <quotes/>
+            </widget>
+        </window>
+
+        <window name="launcher" stacking="bg">
+            <geometry x="515px" y="410px" width="280px" height="120px"/>
+            <widget>
+                <launcher/>
+            </widget>
+        </window>
+
+        <window name="slider-bars">
+            <geometry x="805px" y="410px" width="265px" height="250px"/>
+            <widget>
+                <slider-bars/>
+            </widget>
+        </window>
+
+        <window name="rofi" stacking="bg">
+            <geometry x="900px" y="230px" width="60px" height="60px"/>
+            <widget>
+                <rofi/>
+            </widget>
+        </window>
+
+        <window name="screenshot" stacking="bg">
+            <geometry x="990px" y="230px" width="60px" height="60px"/>
+            <widget>
+                <screenshot/>
+            </widget>
+        </window>
+        <window name="widget-lock" stacking="bg">
+            <geometry x="900px" y="320px" width="60px" height="60px"/>
+            <widget>
+                <widget-lock/>
+            </widget>
+        </window>
+
+        <window name="power" stacking="bg">
+            <geometry x="990px" y="320px" width="60px" height="60px"/>
+            <widget>
+                <power/>
+            </widget>
+        </window>
+    </windows>
+    
+</eww>

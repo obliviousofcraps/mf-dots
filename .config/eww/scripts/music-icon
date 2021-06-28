@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#status="$(playerctl -p spotify status)"
+status="$(mpc status)"
+
+if [[ $status == *"laying"* ]];
+then
+    echo " 󰎈 "
+elif [[ $status == *"aused"* ]];
+then
+    echo "  "
+else
+    echo ""
+fi

@@ -4,15 +4,15 @@
 
 <menu id="new menu 1" label="Openbox">
 	<separator label="Openbox"/>
-	<item label="Reconfigure" icon="/home/aidoneus/.icons/Custom-apks/Crayons/backup.png">
+	<item label="Reconfigure" icon="/home/aidoneus/.icons/Crayons/backup.png">
 		<action name="Reconfigure"/>
 	</item>
-	<item label="Openbox RC" icon="/home/aidoneus/.icons/Custom-apks/Crayons/notes_2_alt.png">
+	<item label="Openbox RC" icon="/home/aidoneus/.icons/Crayons/notes_2_alt.png">
 		<action name="Execute">
 			<command>geany .config/openbox/rc.xml</command>
 		</action>
 	</item>
-	<item label="Openbox Autostart" icon="/home/aidoneus/.icons/Custom-apks/Crayons/lockscreen_start.png">
+	<item label="Openbox Autostart" icon="/home/aidoneus/.icons/Crayons/lockscreen_start.png">
 		<action name="Execute">
 			<command>geany .config/openbox/autostart</command>
 		</action>
@@ -21,36 +21,36 @@
 
 <menu id="root-menu" label="Openbox 3">
 	<separator label=" Hey Dave "/>
-	<item label="Apps" icon="/home/aidoneus/.icons/Custom-apks/Crayons/nexa_iconpack.png">
+	<item label="Apps" icon="/home/aidoneus/.icons/Crayons/nexa_iconpack.png">
 		<action name="Execute">
 			<command>rofi -show drun</command>
 		</action>
 	</item>
 	<separator/>
-	<item label="Files" icon="/home/aidoneus/.icons/Custom-apks/Crayons/file_manager.png">
+	<item label="Files" icon="/home/aidoneus/.icons/Crayons/file_manager.png">
 		<action name="Execute">
 			<command>thunar</command>
 		</action>
 	</item>
-	<item label="Web" icon="/home/aidoneus/.icons/Custom-apks/Crayons/firefox_focus.png">
+	<item label="Web" icon="/home/aidoneus/.icons/Crayons/firefox_focus.png">
 		<action name="Execute">
 			<command>firefox</command>
 		</action>
 	</item>
-	<item label="Terminal" icon="/home/aidoneus/.icons/Custom-apks/Crayons/connectbot.png">
+	<item label="Terminal" icon="/home/aidoneus/.icons/Crayons/connectbot.png">
 		<action name="Execute">
 			<command>kitty</command>
 		</action>
 	</item>
 	<separator/>
-	<menu id="new menu 1" icon="/home/aidoneus/.icons/Custom-apks/Crayons/dropbox.png"/>
+	<menu id="new menu 1" icon="/home/aidoneus/.icons/Crayons/dropbox.png"/>
 	<separator/>
-	<item label="Exit" icon="/home/aidoneus/.icons/Custom-apks/Crayons/bhim.png">
+	<item label="Exit" icon="/home/aidoneus/.icons/Crayons/bhim.png">
 		<action name="Exit">
 			<prompt>yes</prompt>
 		</action>
 	</item>
-	<item label="Shutdown" icon="/home/aidoneus/.icons/Custom-apks/Crayons/icarros.png">
+	<item label="Shutdown" icon="/home/aidoneus/.icons/Crayons/icarros.png">
 		<action name="Execute">
 			<command>~/.config/rofi/scripts/powermenu.sh</command>
 		</action>

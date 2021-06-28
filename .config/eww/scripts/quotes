@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+quote=$(curl -s "https://api.quotable.io/random?maxLength=38" | jq '.content' | cut -d "\"" -f 2)
+
+echo $quote

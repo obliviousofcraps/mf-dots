@@ -1,0 +1,66 @@
+<eww>
+	
+	
+    <variables>
+
+        <!--Profile Name-->
+        <script-var name="profile_name">echo $USER</script-var>
+		
+		<!--music vars-->
+		<script-var name="art" interval="2s">~/.config/eww/scripts/echoSongArt</script-var>
+		<script-var name="music_status" interval="1s">bash -c '~/.config/eww/scripts/music-status'</script-var>
+        <script-var name="song_title" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh title'| cut -c 1-22</script-var>
+        <script-var name="song_artist" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh artist'| cut -c 1-22</script-var>
+        <script-var name="music_separator" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh separator'</script-var>
+        <script-var name="music_icon" interval='1s'>bash -c '~/.local/bin/scripts/music-controller.sh icon'</script-var>
+
+        <!--date vars-->
+        <script-var name="day" interval="1h">date "+%a"</script-var>
+		<script-var name="number_day" interval="5h">date "+%d"</script-var>
+        <script-var name="month" interval="10h">date "+%b"</script-var>
+        <script-var name="min" interval="10s">date "+%M"</script-var>
+        <script-var name="hour" interval="1m">date "+%H"</script-var>
+        <script-var name="year_full" interval="15h">date "+%Y"</script-var>
+        
+        <!--weather-->
+        <script-var name="current_temp" interval="10m">bash -c 'scripts/weather current_temp'</script-var>
+        <script-var name="feels_like" interval="10m">bash -c 'scripts/weather feels_like'</script-var>
+        <script-var name="weather_desc" interval="10m">bash -c 'scripts/weather weather_desc'</script-var>
+        <script-var name="humidity" interval="10m">bash -c 'scripts/weather humidity'</script-var>
+        <script-var name="wind" interval="10m">bash -c 'scripts/weather wind'</script-var>
+		
+		<!--network vars-->
+		<script-var name="network_stat" interval="100ms">bash -c 'scripts/network icon'</script-var>
+		<script-var name="network_label" interval="100ms">bash -c 'scripts/network status'</script-var>
+		
+		<!--volume-->
+        <script-var name="volume_stat" interval="100ms">bash -c 'scripts/volume icon'</script-var>
+        <script-var name="volume_control">bash -c 'scripts/volume mute'</script-var>
+        <script-var name="volume" interval="16ms">bash -c 'scripts/getvol'</script-var>
+        
+        <!--system-stat-->
+        <script-var name="ram_used">~/.config/eww/scripts/getram</script-var>
+        <script-var name="info_uptime" interval="60s">bash -c 'scripts/system up'</script-var>
+        <script-var name="info_cpu" interval="60s">bash -c 'scripts/system cpuavg'</script-var>
+        <script-var name="info_disk" interval="12h">bash -c 'scripts/system disk'</script-var>
+        <script-var name="info_mem" interval="30s">bash -c 'scripts/system mem'</script-var>
+        <script-var name="current_bright" interval="500ms">bash -c 'scripts/brightness'</script-var>
+        
+        <!--battery-->
+        <script-var name="rem_batt" interval="2m">\cat /sys/class/power_supply/BAT0/capacity</script-var>
+        
+        <!--workspace-var--> <!--courtesy of mish-->
+        <script-var name="current_ws" interval="500ms">bash ~/.config/eww/scripts/get-current-ws</script-var>
+
+        <script-var name="quotes" interval="10h">bash ~/.config/eww/scripts/quotes</script-var>
+
+        <!--bar vars for current setup-->
+        <!--<script-var name="current_title" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh title' | cut -c 1-22</script-var>
+        <script-var name="current_artist" interval="1s">bash -c '~/.local/bin/scripts/music-controller.sh artist' | cut -c 1-22</script-var>
+        
+        <script-var name="wifi_label" interval="100ms">bash -c 'scripts/network status'</script-var>
+        
+        <script-var name="batt_rem" interval="30s">\cat /sys/class/power_supply/BAT0/capacity</script-var>-->
+	</variables>
+	
+</eww>

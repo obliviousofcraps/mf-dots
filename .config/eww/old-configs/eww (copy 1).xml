@@ -1,0 +1,210 @@
+ <eww>
+	 <includes>
+		 <file path="./bar.xml"/>
+		 <file path="./experiment.xml"/>
+		 <file path="./script-vars.xml"/>
+	 </includes>
+	 <definitions>
+	    <def name="player">
+            <box orientation="h" space-evenly="true">
+                <box class="song-data" orientation="v" space-evenly="false">
+                    <box class="song-title" orientation="h" space-evenly="false">
+                        <box class="musicon">󰎇</box>
+                        <box class="song">{{song_title}}</box>
+                    </box>
+                    <box class="song-artist" orientation="h" space-evenly="false">
+                        <box class="musicon">󰀄</box>
+                        <box class="song">{{song_artist}}</box>
+                    </box>
+                </box>
+             </box>
+        </def>
+        <def name="player-buttons">
+			<box class="player-btns" orientation="v" halign="center">
+				<button class="player-btn" onclick="mpc prev">󰒮</button>
+				<button class="toggle" onclick="mpc toggle" style="background-image: url('{{music_status}}');"></button>
+				<button class="player-btn" onclick="mpc next">󰒭</button>
+			</box>
+        </def>
+        <def name="player-art">
+			<box orientation="v" space-evenly="true">
+				<box class="song-art" style="background-image: url('{{art}}');"></box>
+			</box>
+        </def>
+        <def name="launcher">
+            <box orientation="v" space-evenly="true">
+                <box class="launcher" orientation="v" space-evenly="true">
+                    <button onclick="setsid -f vivaldi-stable " style="background-image:url('/home/aidoneus/.icons/Kamijara/vivaldi_browser.png')"></button>
+                    <button onclick="setsid -f firefox " style="background-image:url('/home/aidoneus/.icons/Crayons/firefox_nightly.png')"></button>
+                    <button onclick="setsid -f kitty -d ~" style="background-image:url('/home/aidoneus/.icons/Crayons/termux.png')"></button>
+                    <button onclick="setsid -f thunar ~" style="background-image:url('/home/aidoneus/.icons/Crayons/filemanager_plus.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable https://discord.com/channels/@me" style="background-image:url('/home/aidoneus/.icons/Crayons/discord_alt1.png')"></button>
+                    <button onclick="setsid -f vivaldi-stable github.com" style="background-image:url('/home/aidoneus/.icons/Crayons/github.png')"></button>
+                </box>
+            </box>
+        </def>
+        <def name="time-widget">
+            <box orientation="v" space-evenly="true">
+                <box orientation="h" class="time-widget">
+                    <box class="hour">{{hour}}</box>
+                    <box class="dot-dot">:</box>
+                    <box class="minute">{{min}}</box>
+                </box>
+            </box>
+        </def>
+        <def name="face">
+            <box orientation="h" space-evenly="true">
+                <box orientation="v" class="profile">
+                    <box class="profile-icon"></box>
+                    <box class="profile-name" orientation="v">
+                        <box class="hostname">Hey {{profile_name}}!</box>
+                        <box class="username">@obliviousofcraps</box>
+                    </box>
+                </box>
+            </box>
+        </def>
+        <def name="weather">
+            <box orientation="v" class="weather" space-evenly="true" halign="fill">
+                <box orientation="h" style="margin-left: -58px">{{weather_desc}}</box>
+                <box orientation="h">
+                    <box class="current-temp">{{current_temp}}°C</box>
+                </box>
+                <box orientation="v" class="feels-like">Feels like {{feels_like}}°</box>
+                <box orientation="h" class="wet-cond">
+                    <box class="humidity" style="color: #75c26d">󰖌</box>
+                    <box class="humidity-lit" style="margin-left: -15px">{{humidity}}</box>
+                    <box class="wind" style="color: #b97de3">󰖝</box>
+                    <box class="wind-lit">{{wind}}</box>
+                </box>
+            </box>
+        </def>
+        <def name="date">
+            <box orientation="v" class="date" halign="fill" valign="fill">
+                <box class="today" style="margin-left: -30px;color:#a7bdfb;font-family:'Material Design Icons Desktop';font-size: 28px;">󰃭</box>
+                <box orientation="h" style="font-size: 20px;">
+                    <box class="month" style="margin-left: -5px;">{{number_day}} {{month}}</box>
+                </box>
+                <box class="day" style="font-size: 18px;margin-left: -30px;">{{day}}</box>
+            </box>
+        </def>
+        <def name="battery">
+            <box orientation="h" class="battery">
+                <scale min="0" max="101" class="battery-prog" value="{{rem_batt}}"/>
+            </box>
+        </def>
+        <def name="tools">
+            <box class="tools" orientation="h" space-evenly="true">
+                <button class="rofi" onclick="setsid -f rofi -show drun" style="background-image:url('/home/aidoneus/.icons/Crayons/nexa_iconpack.png')"></button>
+                <button class="network-icon" onclick="network-manager-dmenu" style="background-image: url('{{network_stat}}');"></button>
+                <button class="volume-icon" onclick="bash -c 'scripts/volume mute'" style="background-image: url('{{volume_stat}}');"></button>
+            </box>
+        </def>
+        <def name="system">
+            <box class="system" orientation="v" >
+                <box class="system-info" orientation="h" space-evenly="false">
+					<label class="syslabel" style="color:#9fe0ff" text="󰥔  "/>
+					<label class="sysinfo-text" text="{{info_uptime}}"/>
+					<label text=" uptime"/>
+				</box>
+				<box class="system-info" orientation="h" space-evenly="false">
+					<label class="syslabel" style="color:#95e7aa" text="󰍛  "/>
+					<label class="sysinfo-text" text="{{info_cpu}} "/>
+					<label text="avg"/>
+				</box>
+				<box class="system-info" orientation="h" space-evenly="false">
+					<label class="syslabel" style="color:#f5b0b1" text="󰊚  "/>
+					<label class="sysinfo-text" text="{{info_mem}} "/>
+					<label text="used"/>
+				</box>
+				<box class="system-info" orientation="h" space-evenly="false">
+					<label class="syslabel" style="color:#fbdf90" text="󰋊  "/>
+					<label class="sysinfo-text" text="{{info_disk}} "/>
+					<label text="free"/>
+                </box>
+            </box>
+        </def>
+    </definitions>
+    
+    <!--variables-->
+    
+    <variables>
+        <script-var name="profile_name">echo $USER</script-var>
+    </variables>
+    
+    <!--windows-->
+    
+    <windows>
+		<window name="player" stacking="bg">
+            <geometry x="360px" y="570px" width="200px" height="80px"/>
+            <widget>
+                <player/>
+            </widget>
+        </window>
+        <window name="player-buttons" stacking="bg">
+			<geometry x="360px" y="410px" width="35px" height="150px"/>
+			<widget>
+				<player-buttons/>
+			</widget>
+        </window>
+        <window name="player-art" stacking="bg">
+			<geometry x="415px" y="410px" width="150px" height="150px"/>
+			<widget>
+				<player-art/>
+			</widget>
+        </window>
+        <window name="launcher" stacking="bg">
+            <geometry x="590px" y="150px" width="45px" height="250px"/>
+            <widget>
+                <launcher/>
+            </widget>
+        </window>
+        <window name="time-widget" stacking="bg">
+            <geometry x="645" y="150px" width="215px" height="100px"/>
+            <widget>
+                <time-widget/>
+            </widget>
+        </window>
+        <window name="pfile" stacking="bg">
+            <geometry x="360px" y="150px" width="220px" height="250px"/>
+            <widget>
+                <face/>
+            </widget>
+        </window>
+        <window name="weather" stacking="bg">
+            <geometry x="645px" y="260px" width="100px" height="80px"/>
+            <widget>
+                <weather/>
+            </widget>
+        </window>
+        <window name="date" stacking="bg">
+            <geometry x="775px" y="260px" width="85px" height="140px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+        <window name="battery" stacking="bg">
+            <geometry x="575px" y="410px" width="145px" height="50px"/>
+            <widget>
+                <battery/>
+            </widget>
+        </window>
+        <window name="tools" stacking="bg">
+            <geometry x="730px" y="410px" width="130px" height="50px"/>
+            <widget>
+                <tools/>
+            </widget>
+        </window>
+        <window name="system" stacking="bg">
+            <geometry x="575px" y="470px" width="285px" height="180px"/>
+            <widget>
+                <system/>
+            </widget>
+        </window>
+        <window name="cal" stacking="bg">
+            <geometry x="45px" y="65px" width="140px" height="110px"/>
+            <widget>
+                <calendar/>
+            </widget>
+        </window>
+    </windows>
+</eww>

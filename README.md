@@ -47,7 +47,7 @@ These are some of the applications that I use in my current setup.
 
 **Dark Theme :**
 <p>
-  <img src="https://i.ibb.co/XVNKD6x/preview.png" alt="Dark-setup">
+  <img src="https://i.ibb.co/SKbTkjQ/12.png" alt="Dark-setup">
 </p>
 <br/>
 

@@ -1,10 +1,10 @@
 #!/bin/sh
 
-KEY=" "
-CITY=" "
+KEY="6cc335d87eea28e775d92c17924514d3"
+CITY="Kathmandu"
 
 weather=$(curl -sf "api.openweathermap.org/data/2.5/weather?q=$CITY&appid=$KEY&units=metric")
-weather_desc=$(echo $weather | jq -r ".weather[0].main")
+weather_desc=$(echo $weather | jq -r ".weather[].description" | head -1 | sed -e "s/\b\(.\)/\u\1/g")
 weather_temp=$(echo $weather | jq ".main.temp" | cut -d "." -f 1)
 feels_like=$(echo $weather | jq ".main.feels_like" | cut -d "." -f 1)
 humidity=$(echo $weather | jq ".main.humidity")

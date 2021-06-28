@@ -1,9 +1,25 @@
 #!/bin/sh
 
-status="$(mpc status)"
+source ~/.local/bin/scripts/music-controller.sh
 
-if [[ $status == *"[playing]"* ]]; then
-	echo "/tmp/mpd_cover.jpg"
-else 
-	echo "$HOME/.mpd/mpdicon.png"
+tmp_dir="/tmp/spotify"
+tmp_cover_path=$tmp_dir/cover.png
+
+if [[ $CURRENT_MUSICPL == *"spotify"* ]]; then
+    if [ ! -d $tmp_dir ]; then
+	    mkdir -p $tmp_dir
+    fi
+
+    artlink="$(playerctl metadata mpris:artUrl | sed -e 's/open.spotify.com/i.scdn.co/g')"
+
+    if [ $(playerctl metadata mpris:artUrl) ]; then
+	    curl -s "$artlink" --output $tmp_cover_path
+        echo "$tmp_cover_path"
+    fi
+elif [[ $CURRENT_MUSICPL == *"mpd"* ]] 
+then
+    echo "/tmp/mpd_cover.jpg"
+	
+else
+    echo "$HOME/.mpd/mpdicon.png"
 fi

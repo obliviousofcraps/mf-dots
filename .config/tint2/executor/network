@@ -4,11 +4,11 @@
 # Requires Material (Icomoon) Font
 
 intwifi="wlp3s0"
-intether="enp4s0"
+intether="eno1"
 
 wifi="󰤨"
 wifidisabled="󰤭"
-lan="󰀂"
+lan="󱔸"
 
 case $1 in
     status)
@@ -27,7 +27,7 @@ case $1 in
         echo "$wifi"
     else
         if [[ $(ip addr | grep $intether | grep 'inet' | awk -F' ' '{print $1}') = *"inet"* ]]; then
-            echo ""
+            echo "$lan"
         else
             echo "$wifidisabled"
         fi
