@@ -1,7 +1,7 @@
 #!/bin/sh
 
-KEY="6cc335d87eea28e775d92c17924514d3"
-CITY="Kathmandu"
+KEY="YOUR KEY"
+CITY="YOUR CITY"
 
 weather=$(curl -sf "api.openweathermap.org/data/2.5/weather?q=$CITY&appid=$KEY&units=metric")
 weather_desc=$(echo $weather | jq -r ".weather[].description" | head -1 | sed -e "s/\b\(.\)/\u\1/g")
