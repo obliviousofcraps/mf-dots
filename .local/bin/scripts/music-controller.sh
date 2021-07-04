@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
-source $HOME/.owl4ce_var
 
-CURRENT_MUSICPL="mpd"
+CURRENT_MUSICPL=
+
+if [ "$(pgrep mpd)" ] && [ "$(pgrep spotify)" ]
+then
+    killall spotify
+    CURRENT_MUSICPL='mpd'
+elif [[ "$(pgrep mpd)" ]]
+then 
+    CURRENT_MUSICPL='mpd'
+elif [[ "$(pgrep spotify)" ]]; 
+then
+    CURRENT_MUSICPL='spotify'
+fi
 
 if [[ $CURRENT_MUSICPL = *"mpd"* ]]; then
     prev="mpc -q prev"
@@ -20,13 +31,14 @@ else
         next="playerctl -p spotify next"
         status="playerctl -p spotify status"
         title="$(playerctl -p spotify metadata -f '{{title}}')"
+        artist="$(playerctl -p spotify metadata -f '{{artist}}')"
     else
         prev=""
         toggle=""
         stop=""
         next=""
         status=""
-        title="There is no mpd or spotify installed"
+        title="No music playing"
     fi
 fi
 
@@ -35,11 +47,11 @@ status="$($status)"
 case $1 in
     icon)
         if [[ $status = *"laying"* ]]; then
-            echo ""
+            echo "󰀥 "
         elif [[ $status = *"paused"* ]]; then
 			echo "󰏥"
 		else
-            echo "󰎈"
+            echo "󰎈 "
         fi
     ;;
     prev)
@@ -67,26 +79,27 @@ case $1 in
     ;;
     separator)
         # For separator
-        if [[ $status = *"laying"* ]];
-        then
+       if [[ $status = *"laying"* ]]; then
             echo " - "
-        elif [[ $status = *"paused"* ]];
-        then
-            echo " - "
-        else
+        elif [[ $status = *"aused"* ]]; then
+			echo " - "
+		else
             echo ""
         fi
+ 
     ;;
     switchpl)
         bash -c "$toggle"
         # Switch music player between mpd and spotify
         if [[ $CURRENT_MUSICPL = *"mpd"* ]]; then
-            sed -i 's_musicpl=".*"_musicpl="spotify"_' $DEFAPPS_FILE
+           # sed -i 's_musicpl=".*"_musicpl="spotify"_' $DEFAPPS_FILE
+           sed -i '0,/mpd/{s/mpd/spotify/}' 
         else
             if [[ $CURRENT_MUSICPL = *"spotify"* ]]; then
-                sed -i 's_musicpl=".*"_musicpl="mpd"_' $DEFAPPS_FILE
+                #sed -i 's_musicpl=".*"_musicpl="mpd"_' $DEFAPPS_FILE
+                sed -i '0,/spotify/{s/spotify/mpd/}' 
             fi
         fi
-        $EXNOTIFY_SEND -u low -i "$NOTIF_MUSIC_ICON" -r 8888 "Music Player" "Set <u>`$DEFAPPS_EXEC -g musicpl`</u> as default"
+        #$EXNOTIFY_SEND -u low -i "$NOTIF_MUSIC_ICON" -r 8888 "Music Player" "Set <u>`$DEFAPPS_EXEC -g musicpl`</u> as default"
     ;;
 esac

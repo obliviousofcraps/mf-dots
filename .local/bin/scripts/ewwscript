@@ -1,0 +1,13 @@
+#!/bin/sh
+
+STATUS="$(ps -ef | grep -w '[e]ww daemon' | wc -l)"
+
+if [[ "${STATUS}" == 0 ]];
+then
+    eww daemon >/dev/null 2>&1 & disown
+    sleep 9s
+    eww open bar
+else 
+    sleep 2s
+    eww open bar
+fi
