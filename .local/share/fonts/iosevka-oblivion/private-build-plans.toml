@@ -1,0 +1,94 @@
+[buildPlans.iosevka-oblivion]
+family = "Iosevka Oblivion"
+spacing = "fontconfig-mono"
+serifs = "sans"
+no-cv-ss = true
+export-glyph-names = true
+
+[buildPlans.iosevka-oblivion.variants.design]
+capital-a = "curly-serifless"
+capital-b = "more-asymmetric-serifless"
+capital-j = "serifed-both-sides"
+capital-k = "curly-serifless"
+capital-q = "crossing"
+capital-r = "standing-open"
+capital-u = "toothed"
+capital-v = "curly"
+capital-x = "curly-serifless"
+capital-y = "curly-base-serifed"
+capital-z = "curly-top-serifed"
+a = "single-storey-tailed"
+b = "toothed"
+d = "tailed-serifless"
+f = "tailed"
+g = "double-storey-open"
+i = "serifed-asymmetric"
+j = "serifed"
+k = "curly-serifless"
+l = "tailed"
+m = "short-leg"
+n = "straight"
+p = "eared"
+q = "tailed"
+r = "corner-hooked"
+t = "standard"
+s = "bilateral-inward-serifed"
+v = "cursive"
+w = "cursive"
+x = "curly-serifless"
+y = "cursive"
+z = "curly-top-serifed"
+eszet = "sulzbacher-descending"
+turn-v = "curly"
+lower-alpha = "crossing"
+lower-iota = "tailed-serifed"
+lower-lambda = "curly-turn"
+cyrl-capital-ze = "unilateral-inward-serifed"
+cyrl-ze = "unilateral-inward-serifed"
+cyrl-capital-ka = "curly-serifless"
+cyrl-ka = "curly-serifless"
+cyrl-capital-u = "curly"
+cyrl-capital-ya = "standing-open"
+cyrl-ya = "standing-open"
+zero = "dotted"
+one = "base"
+four = "semi-open"
+six = "closed-contour"
+seven = "curly-serifed"
+eight = "two-circles"
+nine = "closed-contour"
+caret = "high"
+ampersand = "upper-open"
+at = "threefold"
+dollar = "open-cap"
+cent = "open"
+lig-ltgteq = "flat"
+
+[buildPlans.iosevka-oblivion.variants.italic]
+a = "single-storey-serifless"
+k = "diagonal-tailed-cursive-serifless"
+p = "motion-serifed"
+x = "curly-serifless"
+z = "cursive"
+
+  [buildPlans.iosevka-oblivion.ligations]
+  inherits = "dlig"
+
+[buildPlans.iosevka-oblivion.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-oblivion.weights.medium]
+shape = 500
+menu = 500
+css = 500
+
+[buildPlans.iosevka-oblivion.weights.bold]
+shape = 700
+menu = 700
+css = 700
+
+  [buildPlans.iosevka-oblivion.slopes]
+  upright = "normal"
+  italic = "italic"
